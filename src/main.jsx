@@ -170,6 +170,7 @@ function App() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const openInvitation = () => {
+    if (opening) return;
     playDoorSound();
     setOpening(true);
     window.setTimeout(() => setShowWelcome(false), 1100);
@@ -218,7 +219,7 @@ function App() {
 
   return (
     <main>
-      {showWelcome && <section className={`welcome-screen ${opening ? 'is-opening' : ''}`} aria-label="Wedding invitation welcome">
+      {showWelcome && <section className={`welcome-screen ${opening ? 'is-opening' : ''}`} aria-label="Wedding invitation welcome" onClick={openInvitation}>
         <div className="welcome-grain" />
         <div className="royal-door door-left"><span className="door-arch" /><span className="door-motif">✦</span></div>
         <div className="royal-door door-right"><span className="door-arch" /><span className="door-motif">✦</span></div>
@@ -231,7 +232,7 @@ function App() {
           <h2>Abhishek <em>&</em> Anvi</h2>
           <div className="welcome-flourish"><span />✦<span /></div>
           <p className="welcome-message">With the blessings of Lord Ganesha<br />and the love of our families</p>
-          <button className="open-invitation" onClick={openInvitation}><span>Open the invitation</span><i>→</i></button>
+          <button className="open-invitation" onClick={(event) => { event.stopPropagation(); openInvitation(); }}><span>Open the invitation</span><i>→</i></button>
         </div>
       </section>}
       <section className="hero decorated-section" id="home">

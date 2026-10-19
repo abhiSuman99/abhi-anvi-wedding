@@ -96,7 +96,7 @@
 }
 
 /* Ceremonial invitation entrance */
-.welcome-screen { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow: hidden; color: #f2dfb8; background: radial-gradient(circle at 50% 37%,rgba(157,58,56,.38),transparent 27%),radial-gradient(circle at 50% 50%,#5d1628 0,#310914 58%,#17040a 100%); transition: opacity .85s ease,transform 1.05s cubic-bezier(.7,0,.2,1); }
+.welcome-screen { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow: hidden; cursor: pointer; color: #f2dfb8; background: radial-gradient(circle at 50% 37%,rgba(157,58,56,.38),transparent 27%),radial-gradient(circle at 50% 50%,#5d1628 0,#310914 58%,#17040a 100%); transition: opacity .85s ease,transform 1.05s cubic-bezier(.7,0,.2,1); }
 .welcome-screen.is-opening { opacity: 0; transform: scale(1.08); pointer-events: none; }
 .welcome-grain { position: absolute; inset: 0; opacity: .12; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)' opacity='.4'/%3E%3C/svg%3E"); }
 .welcome-screen::before,.welcome-screen::after { content: ''; position: absolute; width: min(88vw,760px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(220,179,96,.1); box-shadow: 0 0 0 38px rgba(220,179,96,.025),0 0 0 78px rgba(220,179,96,.018); }
