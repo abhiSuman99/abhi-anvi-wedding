@@ -232,7 +232,7 @@ function App() {
           <h2>Abhishek <em>&</em> Anvi</h2>
           <div className="welcome-flourish"><span />✦<span /></div>
           <p className="welcome-message">With the blessings of Lord Ganesha<br />and the love of our families</p>
-          <button className="open-invitation" onClick={(event) => { event.stopPropagation(); openInvitation(); }}><span>Open the invitation</span><i>→</i></button>
+          <button className="open-invitation" onClick={(event) => { event.stopPropagation(); openInvitation(); }}><b className="click-hint">Click here</b><span>Open the invitation</span><i>→</i></button>
         </div>
       </section>}
       <section className="hero decorated-section" id="home">
